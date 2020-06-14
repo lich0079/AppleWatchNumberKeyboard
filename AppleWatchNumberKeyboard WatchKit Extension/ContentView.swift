@@ -9,8 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var input: String = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        VStack {
+            NavigationLink(destination:         NumberKeyboard(inputfield: $input)) {
+                TextField("input", text: $input)
+            }
+        }
+
+//        Button(action: {
+//        }) {
+//            Text("2")
+//                .font(.footnote).frame(height: 10, alignment: .center)
+//        }
     }
 }
 
